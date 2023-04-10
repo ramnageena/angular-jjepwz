@@ -1,0 +1,17 @@
+<h2>Welcome to Grid Example</h2>
+<button (click)="getSelectedRows()">Get Selected Rows</button>
+<pre></pre>
+
+<button (click)="clearSelection()">Clear Selection</button>
+<pre></pre>
+
+<ag-grid-angular #agGrid
+ style="width: 500px; height: 350px;"
+  class="ag-theme-alpine"
+   [rowData]="rowData | async"
+  [columnDefs]="columnDefs" 
+  rowSelection="multiple"
+  [defaultColDef]="defaultColDef"
+  [autoGroupColumnDef]="autoGroupColumnColDef">
+</ag-grid-angular>
+
